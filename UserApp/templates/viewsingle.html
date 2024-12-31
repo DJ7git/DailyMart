@@ -1,0 +1,34 @@
+{% extends 'uindex.html' %} {% block content1 %} {% endblock %} {% block content2 %} {% endblock %} {% block content3 %} {% for i in datasingle %}
+<div class="col-lg-8 col-xl-9">
+  <div class="row g-4">
+    <div class="col-lg-6">
+      <div class="border rounded">
+        <a href="#">
+          <img
+            src="{{i.movieImage.url}}"
+            class="img-fluid rounded"
+            alt="Image"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <h4 class="fw-bold mb-3">{{i.movieName}}</h4>
+      <p class="mb-3">Genre: {{i.movieGenre}}</p>
+      <h5 class="fw-bold mb-3">3,35 $</h5>
+      <div class="d-flex mb-4">
+        <i class="fa fa-star text-secondary"></i>
+        <i class="fa fa-star text-secondary"></i>
+        <i class="fa fa-star text-secondary"></i>
+        <i class="fa fa-star text-secondary"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <p class="mb-4">{{i.movieDescription}}</p>
+      <p class="mb-4">
+        Susp endisse ultricies nisi vel quam suscipit. Sabertooth peacock
+        flounder; chain pickerel hatchetfish, pencilfish snailfish
+      </p>
+    </div>
+  </div>
+</div>
+{% endfor %} {% endblock %} {% block content4 %} {% endblock %}
